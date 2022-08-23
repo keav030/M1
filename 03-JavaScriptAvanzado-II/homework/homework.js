@@ -22,8 +22,7 @@ function counter() {
 
   let counter = 0
   return function(){
-    counter++
-    return counter
+    return ++counter
   }
 
 
@@ -52,10 +51,10 @@ function cacheFunction(cb) {
   squareCache(5)    // no volverá a invocar a square, simplemente buscará en la caché cuál es el resultado de square(5) y lo retornará (tip: si usaste un objeto, podés usar hasOwnProperty) 
 
   */
-  let sArg = 0
+  let saveArg = 0
   return function(arg){
-    if(sArg !== arg){
-      sArg=arg
+    if(saveArg !== arg){
+      saveArg=arg
       return cb(arg)
     }
   }
