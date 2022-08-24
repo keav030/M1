@@ -37,8 +37,7 @@ BinarySearchTree.prototype.insert = function(value){
   }else{
     if(this.value>value)return this.left.insert(value)
     if(this.value<value)return this.right.insert(value)
-  }
-  
+  }  
 } 
 
 BinarySearchTree.prototype.contains = function(value){
