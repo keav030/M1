@@ -2,22 +2,16 @@
 // No cambies los nombres de las funciones.
 
 function factorear(num) {
-  let arr = [1]
   // Factorear el número recibido como parámetro y devolver en un array
   // los factores por los cuales se va dividiendo a dicho número (De menor a mayor)
   // Ej: factorear(180) --> [1, 2, 2, 3, 3, 5] Ya que 1x2x2x3x3x5 = 180 y son todos números primos
   // Tu código:
+  let arr = [1]
   for (let i = 0; i <=num; i++) {
-    let divs = 0
-    for (let j = 0; j <=i; j++) {
-      if(i%j===0)divs++
-    }
-    if(divs<=2){
       while(num%i===0 && i!==1){
         num=num/i
         arr.push(i) 
       }
-    }
   }
   return arr
 }
@@ -75,7 +69,6 @@ function selectionSort(array) {
         array[i]=array[j]
         array[j]=min
       }
-      console.log("min: ", min)
     } 
   }
   return array
