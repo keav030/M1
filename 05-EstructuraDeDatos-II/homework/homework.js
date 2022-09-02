@@ -106,42 +106,24 @@ Ejemplo: supongamos que quiero guardar {instructora: 'Ani'} en la tabla. Primero
 */
 
 function HashTable() {
-  this.buckets=[]
-  this.numBuckets=35
+  
 }
 
 HashTable.prototype.hash = function(key){
-  let result = 0
-  for (let i = 0; i < key.length; i++) {
-    result = result + key.charCodeAt(i)
-  }
-  return result % this.numBuckets
 }
 
 HashTable.prototype.set = function(key, value){
-  if(typeof key !== 'string')throw TypeError("Keys must be strings")
-  let i = this.hash(key)
-  if(this.buckets[i]===undefined){
-    this.buckets[i]={}
-  }
-  this.buckets[i][key] = value
+  
 
 }
 
 HashTable.prototype.get = function(key){ 
-  let i = this.hash(key)
-  if(this.buckets[i][key]){
-    return this.buckets[i][key]
-  }
+  
+
 }
 
 HashTable.prototype.hasKey = function(key){
-  let i = this.hash(key)
-  if(this.buckets[i][key]){
-    return true
-  }else{
-    return false
-  } 
+  
 }
 
 // No modifiquen nada debajo de esta linea

@@ -37,22 +37,24 @@ Implementar la clase Queue, sabiendo que es una estructura de tipo FIFO, donde e
 Pueden utilizar class o función constructora.
 */
 
-function Queue() {
-  this.array = []
+class Queue {
+  constructor() {
+    this.array = [];
+  }
+  enqueue(elem) {
+    this.array.push(elem);
+
+  }
+  dequeue() {
+    return this.array.shift();
+  }
+  size() {
+    return this.array.length;
+  }
 }
 
-Queue.prototype.enqueue = function(elem){
-  this.array.push(elem)
 
-}
 
-Queue.prototype.dequeue = function(){
-  return this.array.shift();
-}
-
-Queue.prototype.size = function(){
-  return this.array.length;
-}
 // No modifiquen nada debajo de esta linea
 // --------------------------------
 
